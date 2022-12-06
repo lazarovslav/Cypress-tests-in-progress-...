@@ -1,9 +1,7 @@
 /// <reference types="cypress" />
 
-
 describe('First Suite', () => {
 
-    
     it('First Test', () => {
 
         cy.visit('/')
