@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
 
-describe('Our first suite', () => {
+describe('First Suite', () => {
 
     
-    it('first test', () => {
+    it('First Test', () => {
 
         cy.visit('/')
         cy.contains('Forms').click()
@@ -39,7 +39,6 @@ describe('Our first suite', () => {
 
         //The Most Recommended Way By Cypress
         cy.get('[data-cy="imputEmail1"]')
-
     })
 
     it('Second Test', () => {
@@ -62,10 +61,8 @@ describe('Our first suite', () => {
             .parents('form')
             .find('nb-checkbox')
             .click()
-        cy.contains('nb-card', 'Horizontal form').find('[type="email"]')
-        
+        cy.contains('nb-card', 'Horizontal form').find('[type="email"]')     
     })
-
 
     it.only('Then And Wrap Method', () => {
 
@@ -73,10 +70,10 @@ describe('Our first suite', () => {
         cy.contains('Forms').click()
         cy.contains('Form Layouts').click()
 
-        //cy.contains('nb-card', 'Using the Grid').find('[for="inputEmail1"]').should('contain', 'Email')
-        //cy.contains('nb-card', 'Using the Grid').find('[for="inputPassword2"]').should('contain', 'Password')
-        //cy.contains('nb-card', 'Basic form').find('[for="exampleInputEmail1"]').should('contain', 'Email address')
-        //cy.contains('nb-card', 'Basic form').find('[for="exampleInputPassword1"]').should('contain', 'Password')
+        cy.contains('nb-card', 'Using the Grid').find('[for="inputEmail1"]').should('contain', 'Email')
+        cy.contains('nb-card', 'Using the Grid').find('[for="inputPassword2"]').should('contain', 'Password')
+        cy.contains('nb-card', 'Basic form').find('[for="exampleInputEmail1"]').should('contain', 'Email address')
+        cy.contains('nb-card', 'Basic form').find('[for="exampleInputPassword1"]').should('contain', 'Password')
 
         //Cypress style (not Selenium style)
 
@@ -89,16 +86,8 @@ describe('Our first suite', () => {
             cy.contains('nb-card', 'Basic form').then( secondForm => {
                 const passwordSecondText = secondForm.find('[for="exampleInputPassword1"]').text()
                 expect(passwordLabelFirst).to.equal(passwordSecondText)
-
                 cy.wrap(secondForm).find('[for="exampleInputPassword1"]').should('contain', 'Password')
         })
-
         })
-        
-
-
-
     })
-
-
 })
