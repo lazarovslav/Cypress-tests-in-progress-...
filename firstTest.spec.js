@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-describe('First Suite', () => {
+describe('first Suite', () => {
 
-    it('First Test', () => {
+    it('first Test', () => {
 
         cy.visit('/')
         cy.contains('Forms').click()
@@ -39,7 +39,7 @@ describe('First Suite', () => {
         cy.get('[data-cy="imputEmail1"]')
     })
 
-    it('Second Test', () => {
+    it('second Test', () => {
 
         cy.visit('/')
         cy.contains('Forms').click()
