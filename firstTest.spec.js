@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 
-describe('Our first suite', () => {
+describe('First suite', () => {
 
     
     it('first test', () => {
